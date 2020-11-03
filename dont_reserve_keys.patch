@@ -1,44 +1,44 @@
 diff --git a/browser/base/content/browser-sets.inc b/browser/base/content/browser-sets.inc
 --- a/browser/base/content/browser-sets.inc
 +++ b/browser/base/content/browser-sets.inc
-@@ -115,9 +115,9 @@
+@@ -125,9 +125,9 @@
      <key id="key_newNavigator"
-          key="&newNavigatorCmd.key;"
+          data-l10n-id="window-new-shortcut"
           command="cmd_newNavigator"
 -         modifiers="accel" reserved="true"/>
 +         modifiers="accel" />
-     <key id="key_newNavigatorTab" key="&tabCmd.commandkey;" modifiers="accel"
+     <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel"
 -         command="cmd_newNavigatorTabNoEvent" reserved="true"/>
 +         command="cmd_newNavigatorTabNoEvent" />
-     <key id="focusURLBar" key="&openCmd.commandkey;" command="Browser:OpenLocation"
+     <key id="focusURLBar" data-l10n-id="location-open-shortcut" command="Browser:OpenLocation"
           modifiers="accel"/>
  #ifndef XP_MACOSX
-@@ -159,8 +159,8 @@
-     <key id="openFileKb" key="&openFileCmd.commandkey;" command="Browser:OpenFile"  modifiers="accel"/>
-     <key id="key_savePage" key="&savePageCmd.commandkey;" command="Browser:SavePage" modifiers="accel"/>
-     <key id="printKb" key="&printCmd.commandkey;" command="cmd_print"  modifiers="accel"/>
--    <key id="key_close" key="&closeCmd.key;" command="cmd_close" modifiers="accel" reserved="true"/>
--    <key id="key_closeWindow" key="&closeCmd.key;" command="cmd_closeWindow" modifiers="accel,shift" reserved="true"/>
-+    <key id="key_close" key="&closeCmd.key;" command="cmd_close" modifiers="accel" />
-+    <key id="key_closeWindow" key="&closeCmd.key;" command="cmd_closeWindow" modifiers="accel,shift" />
-     <key id="key_toggleMute" key="&toggleMuteCmd.key;" command="cmd_toggleMute" modifiers="control"/>
+@@ -174,8 +174,8 @@
+     <key id="openFileKb" data-l10n-id="file-open-shortcut" command="Browser:OpenFile"  modifiers="accel"/>
+     <key id="key_savePage" data-l10n-id="save-page-shortcut" command="Browser:SavePage" modifiers="accel"/>
+     <key id="printKb" data-l10n-id="print-shortcut" command="cmd_print_kb"  modifiers="accel"/>
+-    <key id="key_close" data-l10n-id="close-shortcut" command="cmd_close" modifiers="accel" reserved="true"/>
+-    <key id="key_closeWindow" data-l10n-id="close-shortcut" command="cmd_closeWindow" modifiers="accel,shift" reserved="true"/>
++    <key id="key_close" data-l10n-id="close-shortcut" command="cmd_close" modifiers="accel" />
++    <key id="key_closeWindow" data-l10n-id="close-shortcut" command="cmd_closeWindow" modifiers="accel,shift" />
+     <key id="key_toggleMute" data-l10n-id="mute-toggle-shortcut" command="cmd_toggleMute" modifiers="control"/>
      <key id="key_undo"
-          key="&undoCmd.key;"
-@@ -272,7 +272,7 @@
-     <key id="key_switchTextDirection" key="&bidiSwitchTextDirectionItem.commandkey;" command="cmd_switchTextDirection" modifiers="accel,shift" />
+          data-l10n-id="text-action-undo-shortcut"
+@@ -304,7 +304,7 @@
+     <key id="key_switchTextDirection" data-l10n-id="bidi-switch-direction-shortcut" command="cmd_switchTextDirection" modifiers="accel,shift" />
  
-     <key id="key_privatebrowsing" command="Tools:PrivateBrowsing" key="&privateBrowsingCmd.commandkey;"
+     <key id="key_privatebrowsing" command="Tools:PrivateBrowsing" data-l10n-id="private-browsing-shortcut"
 -         modifiers="accel,shift" reserved="true"/>
 +         modifiers="accel,shift" />
      <key id="key_sanitize" command="Tools:Sanitize" keycode="VK_DELETE" modifiers="accel,shift"/>
  #ifdef XP_MACOSX
      <key id="key_sanitize_mac" command="Tools:Sanitize" keycode="VK_BACK" modifiers="accel,shift"/>
-@@ -289,7 +289,7 @@
+@@ -321,7 +321,7 @@
  #ifndef XP_MACOSX
           command="cmd_quitApplication"
  #endif
 -         reserved="true"/>
 +         />
  
-     <key id="key_undoCloseTab" command="History:UndoCloseTab" key="&tabCmd.commandkey;" modifiers="accel,shift"/>
-     <key id="key_undoCloseWindow" command="History:UndoCloseWindow" key="&newNavigatorCmd.key;" modifiers="accel,shift"/>
+     <key id="key_undoCloseTab" command="History:UndoCloseTab" data-l10n-id="tab-new-shortcut" modifiers="accel,shift"/>
+     <key id="key_undoCloseWindow" command="History:UndoCloseWindow" data-l10n-id="window-new-shortcut" modifiers="accel,shift"/>
