@@ -1,0 +1,29 @@
+# HG changeset patch
+# User Ghjuvan Lacambre <code@lacamb.re>
+# Date 1604849733 -3600
+#      Sun Nov 08 16:35:33 2020 +0100
+# Node ID 57984ccfdba5628e2d4e68933599b25eaf4054fc
+# Parent  0e95e169ef40f27ae4de839644c63249acd3b5b1
+Don't upgrade webextension websockets to wss:// behind their back
+
+diff --git a/dom/websocket/WebSocket.cpp b/dom/websocket/WebSocket.cpp
+--- a/dom/websocket/WebSocket.cpp
++++ b/dom/websocket/WebSocket.cpp
+@@ -1553,7 +1553,8 @@
+ 
+   // If the HTTPS-Only mode is enabled, we need to upgrade the websocket
+   // connection from ws:// to wss:// and mark it as secure.
+-  if (!mIsServerSide && !mSecure && originDoc) {
++  if (!mIsServerSide && !mSecure && originDoc &&
++      !originDoc->GetDocumentURI()->SchemeIs("moz-extension")) {
+     nsCOMPtr<nsIURI> uri;
+     nsresult rv = NS_NewURI(getter_AddRefs(uri), mURI);
+     NS_ENSURE_SUCCESS(rv, rv);
+@@ -1578,6 +1579,7 @@
+   // to wss: before performing content policy checks because CSP needs to
+   // send reports in case the scheme is about to be upgraded.
+   if (!mIsServerSide && !mSecure && originDoc &&
++      !originDoc->GetDocumentURI()->SchemeIs("moz-extension") &&
+       originDoc->GetUpgradeInsecureRequests(false)) {
+     // let's use the old specification before the upgrade for logging
+     AutoTArray<nsString, 2> params;
