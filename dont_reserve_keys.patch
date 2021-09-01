@@ -1,39 +1,39 @@
 diff --git a/browser/base/content/browser-sets.inc b/browser/base/content/browser-sets.inc
 --- a/browser/base/content/browser-sets.inc
 +++ b/browser/base/content/browser-sets.inc
-@@ -125,9 +125,9 @@
+@@ -123,9 +123,9 @@
      <key id="key_newNavigator"
           data-l10n-id="window-new-shortcut"
           command="cmd_newNavigator"
 -         modifiers="accel" reserved="true"/>
-+         modifiers="accel" />
++         modifiers="accel"/>
      <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel"
 -         command="cmd_newNavigatorTabNoEvent" reserved="true"/>
-+         command="cmd_newNavigatorTabNoEvent" />
++         command="cmd_newNavigatorTabNoEvent"/>
      <key id="focusURLBar" data-l10n-id="location-open-shortcut" command="Browser:OpenLocation"
           modifiers="accel"/>
  #ifndef XP_MACOSX
-@@ -174,8 +174,8 @@
+@@ -172,8 +172,8 @@
      <key id="openFileKb" data-l10n-id="file-open-shortcut" command="Browser:OpenFile"  modifiers="accel"/>
      <key id="key_savePage" data-l10n-id="save-page-shortcut" command="Browser:SavePage" modifiers="accel"/>
-     <key id="printKb" data-l10n-id="print-shortcut" command="cmd_print_kb"  modifiers="accel"/>
+     <key id="printKb" data-l10n-id="print-shortcut" command="cmd_print"  modifiers="accel"/>
 -    <key id="key_close" data-l10n-id="close-shortcut" command="cmd_close" modifiers="accel" reserved="true"/>
 -    <key id="key_closeWindow" data-l10n-id="close-shortcut" command="cmd_closeWindow" modifiers="accel,shift" reserved="true"/>
-+    <key id="key_close" data-l10n-id="close-shortcut" command="cmd_close" modifiers="accel" />
-+    <key id="key_closeWindow" data-l10n-id="close-shortcut" command="cmd_closeWindow" modifiers="accel,shift" />
++    <key id="key_close" data-l10n-id="close-shortcut" command="cmd_close" modifiers="accel"/>
++    <key id="key_closeWindow" data-l10n-id="close-shortcut" command="cmd_closeWindow" modifiers="accel,shift"/>
      <key id="key_toggleMute" data-l10n-id="mute-toggle-shortcut" command="cmd_toggleMute" modifiers="control"/>
      <key id="key_undo"
           data-l10n-id="text-action-undo-shortcut"
-@@ -304,7 +304,7 @@
+@@ -302,7 +302,7 @@
      <key id="key_switchTextDirection" data-l10n-id="bidi-switch-direction-shortcut" command="cmd_switchTextDirection" modifiers="accel,shift" />
  
      <key id="key_privatebrowsing" command="Tools:PrivateBrowsing" data-l10n-id="private-browsing-shortcut"
 -         modifiers="accel,shift" reserved="true"/>
-+         modifiers="accel,shift" />
++         modifiers="accel,shift"/>
      <key id="key_sanitize" command="Tools:Sanitize" keycode="VK_DELETE" modifiers="accel,shift"/>
  #ifdef XP_MACOSX
      <key id="key_sanitize_mac" command="Tools:Sanitize" keycode="VK_BACK" modifiers="accel,shift"/>
-@@ -321,7 +321,7 @@
+@@ -319,7 +319,7 @@
  #ifndef XP_MACOSX
           command="cmd_quitApplication"
  #endif
